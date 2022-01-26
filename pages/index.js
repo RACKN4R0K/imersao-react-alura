@@ -20,16 +20,6 @@ function Titulo(props) {
   )
 }
 
-// export default function Home() {
-//   return (
-//     <div>
-//       <GlobalStyle />
-//       <Titulo tag="h2">Boas vinda de volta!</Titulo>
-//       <h2>Discord - Alura Matrix</h2>
-//     </div>
-//   )
-// }
-
 export default function PaginaInicial() {
   // const username = 'RACKN4R0K';
   const [username, setUsername] = React.useState('')
@@ -66,7 +56,7 @@ export default function PaginaInicial() {
             onSubmit={function(infoDoEvento){
               infoDoEvento.preventDefault()//faz que a pagina não recarregue quando o submit do botão for acionado 
               roteamento.push('./components/chat')//navega ate o chat.js e faz um rotemento vis useRooter
-              
+
               //o useRoter foi usado para que o navegador não precisasse atualizar quando o submit acionado
 
             }}
@@ -79,20 +69,7 @@ export default function PaginaInicial() {
             <Text variant="body3" styleSheet={{ marginBottom: '32px', color: AppConfig.theme.colors.neutrals[300] }}>
               {AppConfig.name}
             </Text>
-
-
-            {/* <input 
-            type='text' 
-            value={username} 
-            placeholder='Digite seu usuario' 
-            onChange={function (event){
-              console.log('o usuario digitou', event.target.value)
-              //Valor para encontrar o perfil do git
-              const valor = event.target.value
-              // guada a variavel valor no setUsername e também no usuario.
-              setUsername(valor)
-              }
-            }/> */}
+            
             <TextField
               value={username}
               onChange={function (event){
