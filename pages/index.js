@@ -5,7 +5,6 @@ import React from 'react';
 
 
 function Titulo(props) {
-  console.log(props)
   var Tag = props.tag || 'h1'
   return (
     <>
@@ -65,8 +64,10 @@ export default function PaginaInicial() {
           <Box
             as="form"
             onSubmit={function(infoDoEvento){
-              infoDoEvento.preventDefault()
-              roteamento.push('./components/chat')
+              infoDoEvento.preventDefault()//faz que a pagina não recarregue quando o submit do botão for acionado 
+              roteamento.push('./components/chat')//navega ate o chat.js e faz um rotemento vis useRooter
+              
+              //o useRoter foi usado para que o navegador não precisasse atualizar quando o submit acionado
 
             }}
             styleSheet={{
@@ -95,7 +96,6 @@ export default function PaginaInicial() {
             <TextField
               value={username}
               onChange={function (event){
-                console.log('o usuario digitou', event.target.value)
                 //Valor para encontrar o perfil do git
                 const valor = event.target.value
                 // guarda a variavel valor no setUsername e também no usuario.
