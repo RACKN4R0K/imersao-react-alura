@@ -11,7 +11,7 @@ export default function ChatPage() {
         const mensagem = {
             id: listaMensagem.length++,
             de: 'rackn4r0k',
-            texto: novaMensagem,
+            texto: novaMensagem
         }
         setListaMensagem([
             mensagem,
@@ -185,7 +185,8 @@ function MessageList(props) {
                                 src={`https://github.com/RACKN4R0K.png`}
                             />
                             <Text tag="strong">
-                                {mensagem.de}
+                                {/* {mensagem.de} */}
+                                {console.log("string mensagem", mensagem.texto)}
                             </Text>
                             <Text
                                 styleSheet={{
